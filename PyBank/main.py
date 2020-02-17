@@ -92,6 +92,6 @@ print(f"Greatest Decrease in Profits: {loss[0]} (${loss[1]})")
 
 #Writing the results to the text file textPyBank
 file=open("C:/Users/Divneet/Desktop/Python_Assignment_3/Python-Challenge/PyBank/textPyBank.txt","w")
-string1="Financial Analysis\n---------------------\nTotal Months: "+str(len(months))+"\nTotal: $"+str(total)+"\nAverage Change: $"+str(round(average,2))+"\nGreatest Increase in Profits: "+str(profit[0])+" $"+str(profit[1])+"\nGreatest Decrease in Profits: "+str(loss[0])+" $"+str(loss[1])
+string1="Financial Analysis\n---------------------\nTotal Months: "+str(len(months))+"\nTotal: $"+str(total)+"\nAverage Change: $"+str(round(average,2))+"\nGreatest Increase in Profits: "+str(profit[0])+" $("+str(profit[1])+")\nGreatest Decrease in Profits: "+str(loss[0])+" $("+str(loss[1])+")"
 file.write(string1)
 file.close()
