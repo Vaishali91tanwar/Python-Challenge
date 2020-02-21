@@ -29,7 +29,7 @@ def count_votes(list):
 #Calculating the percentage of votes received by each candidate
 def percentage_vote(dict):
     for d in dict:
-        candidate_percentage[d]=round(int(dict[d])/len(votes)*100,3)
+        candidate_percentage[d]=format(int(dict[d])/len(votes)*100,".3f")
         
 
 
@@ -44,7 +44,7 @@ def winner(dict):
 
 
 #Reading the csv file
-csvpath= os.path.join("C:/Users/Divneet/desktop/Python_Assignment_3/Python-Challenge/PyPoll/03-Python_Instructions_PyPoll_Resources_election_data.csv")
+csvpath= os.path.join("03-Python_Instructions_PyPoll_Resources_election_data.csv")
 with open(csvpath,  newline="") as csvfile:
     csvreader=csv.reader(csvfile)
     csv_header=next(csvreader)
@@ -70,7 +70,7 @@ print(f"Winner: {winner_name}")
 
 
 #Writing the output to the text file textPyPoll
-file=open("C:/Users/Divneet/Desktop/Python_Assignment_3/Python-Challenge/PyPoll/textPyPoll.txt","w")
+file=open("textPyPoll.txt","w")
 string1="Election Results\n-----------------------\nTotal votes: "+str(len(votes))+"\n-----------------------\n"
 file.write(string1)
 for d in candidate_vote:

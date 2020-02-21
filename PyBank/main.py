@@ -66,7 +66,7 @@ def lowest(dict):
 
 
 #Reading the file containing bank records
-csvpath=os.path.join("C:/Users/Divneet/Desktop/Python_Assignment_3/Python-Challenge/PyBank/03-Python_Instructions_PyBank_Resources_budget_data.csv")
+csvpath=os.path.join("03-Python_Instructions_PyBank_Resources_budget_data.csv")
 with open(csvpath,newline='') as csvfile:
     csvreader=csv.reader(csvfile)
     csv_header=next(csvreader)
@@ -91,7 +91,7 @@ print(f"Greatest Increase in Profits: {profit[0]} (${profit[1]})")
 print(f"Greatest Decrease in Profits: {loss[0]} (${loss[1]})")
 
 #Writing the results to the text file textPyBank
-file=open("C:/Users/Divneet/Desktop/Python_Assignment_3/Python-Challenge/PyBank/textPyBank.txt","w")
+file=open("textPyBank.txt","w")
 string1="Financial Analysis\n---------------------\nTotal Months: "+str(len(months))+"\nTotal: $"+str(total)+"\nAverage Change: $"+str(round(average,2))+"\nGreatest Increase in Profits: "+str(profit[0])+" $("+str(profit[1])+")\nGreatest Decrease in Profits: "+str(loss[0])+" $("+str(loss[1])+")"
 file.write(string1)
 file.close()
